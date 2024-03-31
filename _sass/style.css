@@ -1,0 +1,348 @@
+body {
+  background: #FFFFFF;
+  color: #333;
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden; /* Ensure no overflow of the banner content */
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove any extra space below the image */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 100%;
+  text-align: left;
+}
+
+/* Adjust font sizes for responsiveness */
+.banner-content h1 {
+  font-size: 12em;
+  margin: 0; /* Remove default margin to avoid spacing issues */
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+}
+
+.head {
+  font-size: 2em;
+  margin: 0; /* Remove default margin to avoid spacing issues */
+  font-weight: bold;
+}
+
+.banner-content p {
+  font-size: 1.5em;
+  margin: 0; /* Remove default margin to avoid spacing issues */
+}
+
+.about-me-col {
+  max-width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure content does not overflow with rounded corners */
+}
+
+.about-me-col {
+  max-width: 100%;
+  height: 700px;
+}
+
+.about-me-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 48em) {
+  .about-me-col {
+    margin-top: 2em;
+  }
+}
+.mountain-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.mountain-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  height: 12vw;
+  width: 440px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+  .mountain-card {
+    height: 250px; /* Adjust the height to fit content */
+  }
+}
+.mountain-overlays {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mountain-title {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.mountain-card:hover .mountain-overlays {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  height: 250px; /* Adjust the height to fit content */
+  width: 440px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48em) {
+  .card {
+    height: 250px; /* Adjust the height to fit content */
+  }
+  .card:nth-child(odd) {
+    width: 200px;
+  }
+  .card:nth-child(even) {
+    width: 450px;
+  }
+  .card:nth-child(3n) {
+    width: 350px;
+  }
+}
+.overlays {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.card:hover .overlays {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover .video {
+  opacity: 1;
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.content {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 3.5em;
+}
+
+.content__title,
+.content__sub-title {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-transform: none;
+  display: inline-block;
+  padding-bottom: 1.5em;
+  padding-top: 20px;
+  position: relative;
+  line-height: 1.5em;
+}
+
+.content__title,
+.content__sub-title_child {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-transform: none;
+  display: inline-block;
+  padding-bottom: 0.7em;
+  padding-top: 40px;
+  position: relative;
+  line-height: 1.5em;
+  font-family: "ANTON", sans-serif;
+}
+
+.content__title {
+  /* font-size: 1.2em; */
+}
+
+.clearlist .content__title {
+  /* font-size: 1.45em; */
+}
+
+.content__sub-title {
+  font-size: 1.4em;
+}
+
+.clearlist .content__sub-title {
+  /* font-size: 1.25em; */
+}
+
+.content__title-red {
+  color: #fb4a4a;
+  color: #c12b21;
+}
+
+.content__title:after,
+.content__sub-title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.content__title:after {
+  left: 0em;
+  bottom: 0.2em;
+  height: 8px;
+}
+
+.content__sub-title:after {
+  bottom: 0.3em;
+  height: 4px;
+}
+
+/* Your existing styles for other elements */
+.portfolio-footer {
+  background-color: transparent; /* White background */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1.5em;
+}
+
+.portfolio-footer a {
+  text-decoration: none;
+}
+
+.portfolio-footer img {
+  width: 30px; /* Adjust the size of the Instagram icon as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.intro-section {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-me-col {
+  position: relative;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+.about-me-content {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Adjust the left position as needed */
+  transform: translateY(-50%);
+  color: #fff; /* Set the text color */
+  max-width: 60%; /* Adjust the maximum width as needed */
+}
+
+.about-me-content h1 {
+  font-size: 2.5em; /* Adjust the font size as needed */
+  margin-bottom: 10px;
+}
+
+.about-me-content p {
+  font-size: 1.2em; /* Adjust the font size as needed */
+}/*# sourceMappingURL=style.css.map */

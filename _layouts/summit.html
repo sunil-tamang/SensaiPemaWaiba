@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+
+<div class="about-me-row container-wide row--padding-medium ">
+
+
+<div class="banner ">
+    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
+    <div class="overlay"></div>
+    <div class="banner-content">
+        <h1 class="content__title">{{ page.name }}</h1>
+        <!-- <p>Your Subtitle or Tagline</p> -->
+    </div>
+</div>
+
+
+
+
+<!-- <ul class="photo-list">
+    {% for photo in site.data.photos %}
+      <li class="photo-item">
+        <h2>{{ photo.title }}</h2>
+        <p>Location: {{ photo.location }}</p>
+        <img src="{{ photo.image_url }}" alt="{{ photo.title }}" class="photo-img">
+      </li>
+    {% endfor %}
+  </ul> -->
+
+
+
+</div>
+
+   
+
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    });
+</script>
